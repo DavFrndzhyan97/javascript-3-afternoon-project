@@ -22,6 +22,7 @@ var carDetails = {
 */
 
 //Code Here
+var {color, make, model, year} = carDetails
 
 
 
@@ -35,7 +36,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {firstName, lastName, title} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,7 +55,11 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function totalPopulation(obj) {
+  const {utah, california, texas, arizona} = obj
+  const total = utah + california + texas + arizona
+  return total
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -68,7 +73,23 @@ function greeting( obj ) {
 */
 
 //Code Here
+/// let beans = {
+//   carb: 50,
+//   fat: 75,
+//   protein: 20,
+//   calories: 300
+// }
 
+
+function ingredients(obj) {
+  let newArray = []
+  let {carb, fat, protein} = obj
+  newArray.push(carb, fat, protein)
+  //var carb = 50
+  //var fat = 75
+  //var protein = 20
+  return newArray
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -85,8 +106,23 @@ function greeting( obj ) {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+//var obj = {
+//   first: 50,
+//   second: 25,
+//   third: 75
+// }
 
+
+//Code Here
+function largeNumbers({first, second, third}) {
+  //var first = 50
+  //var second = 25
+  //var third = 75
+
+ return Math.min(first, second, third)
+
+
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +134,13 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function numberGroups({a, b, c}) {
+ if(a.length > b.length && a.length > c.length) {
+   return a
+ } else if(b.length > c.length && b.length > a.length) {
+   return b
+ } else if(c.length > a.length && c.length > b.length) {
+   return c
+ }
+}
 
